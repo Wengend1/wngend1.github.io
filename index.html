@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="个人资料展示和日常信息发布">
+    <title>个人主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+        }
+        .profile h2 {
+            margin: 0;
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .photo-gallery img {
+            width: 30%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .post {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .post h3 {
+            margin: 0;
+        }
+        .comments {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .comment {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+        .comment form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>个人主页</h1>
+    </header>
+
+    <div class="content">
+        <!-- 个人资料 -->
+        <section class="profile">
+            <img src="your-profile-pic.jpg" alt="个人照片">
+            <div>
+                <h2>你的名字</h2>
+                <p>个人简介：这里简要介绍你的背景、兴趣、工作等。</p>
+            </div>
+        </section>
+
+        <!-- 照片墙 -->
+        <section class="photo-gallery">
+            <img src="photo1.jpg" alt="照片1">
+            <img src="photo2.jpg" alt="照片2">
+            <img src="photo3.jpg" alt="照片3">
+            <!-- 添加更多照片 -->
+        </section>
+
+        <!-- 发布的日常信息 -->
+        <section class="post">
+            <h3>日常发布标题</h3>
+            <p>这是你发布的日常信息，可以是文字、图片、心得等内容。</p>
+
+            <!-- 评论区域 -->
+            <div class="comments">
+                <h4>评论</h4>
+                <div class="comment">
+                    <p><strong>用户A:</strong> 很有意思的内容！</p>
+                </div>
+                <div class="comment">
+                    <p><strong>用户B:</strong> 我也有类似的经历，分享一下我的看法。</p>
+                </div>
+
+                <!-- 评论表单 -->
+                <form method="POST">
+                    <input type="text" name="username" placeholder="请输入名字" required>
+                    <textarea name="comment" rows="3" placeholder="发表评论" required></textarea>
+                    <button type="submit">提交评论</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 联系表单 -->
+        <section class="contact-form">
+            <h3>联系我</h3>
+            <form method="POST">
+                <input type="text" name="name" placeholder="你的名字" required>
+                <input type="email" name="email" placeholder="你的邮箱" required>
+                <textarea name="message" rows="4" placeholder="你的信息" required></textarea>
+                <button type="submit">发送信息</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 你的名字 | 版权所有</p>
+    </footer>
+</body>
+</html>
